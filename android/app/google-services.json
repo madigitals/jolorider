@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "316503973177",
+    "project_id": "joloapp-22bce",
+    "storage_bucket": "joloapp-22bce.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316503973177:android:5e5ab4a60a14ac45d25ce8",
+        "android_client_info": {
+          "package_name": "com.jolo.rider_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI1YP-bKk41rAHgAG4i-Hqm7I1iU3mk10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316503973177:android:44588e9d1d72a899d25ce8",
+        "android_client_info": {
+          "package_name": "com.jolo.vendor_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI1YP-bKk41rAHgAG4i-Hqm7I1iU3mk10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316503973177:android:1f873ce2e17c6c2bd25ce8",
+        "android_client_info": {
+          "package_name": "com.jolojolo.user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI1YP-bKk41rAHgAG4i-Hqm7I1iU3mk10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
