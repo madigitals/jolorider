@@ -8,7 +8,7 @@ workflows:
       cocoapods: default
       vars:
         APP_NAME: "sixam_mart"
-        BUNDLE_ID: "com.jolouser.app"
+        BUNDLE_ID: "com.jolorider.app"
     scripts:
       - name: Install dependencies
         script: flutter pub get
