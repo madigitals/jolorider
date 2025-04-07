@@ -1,0 +1,49 @@
+workflows:
+  ios:
+    name: iOS Build Workflow
+    max_build_duration: 120 # Maximum build duration in minutes (optional)
+    
+    # Environment variables (optional, if you want to specify SDK version)
+    environment:
+      flutter: stable
+      sdk: '>=3.2.0 <4.0.0'
+      PUB_CACHE: /opt/flutter/.pub-cache
+      FLUTTER_STORAGE_BASE_URL: https://storage.googleapis.com
+
+    # Pre-build script (commands before build starts)
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter pub get
+
+    # Build and signing setup for iOS (Codemagic will handle the signing automatically)
+    ios:
+      build:
+        release:
+          version: 2.0.2+2
+          flavor: ''
+          # Codemagic handles signing automatically; no need for manual API key or provisioning profile setup
+
+    # Build iOS app
+    scripts:
+      - name: Build iOS app
+        script: |
+          flutter build ios --release --no-codesign # Build without code signing
+
+    # Post-build steps (if needed)
+    post_build:
+      - name: Generate IPA for release
+        script: |
+          flutter build ios --release --no-codesign # Optional, if you want to generate IPA without signing
+
+    # Optional: Artifact upload (e.g., uploading IPA to a distribution platform)
+    artifacts:
+      - path: build/ios/iphoneos/Runner.ipa
+        name: iOS IPA build
+
+    # Deployment section (if applicable)
+    deploy:
+      ios:
+        - platform: app-store
+          app_id: 'YOUR_APP_ID' # This is the app ID you use for deployment
+
